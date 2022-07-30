@@ -330,11 +330,10 @@ public class HomeController {
     @PostMapping(value="/adminlogin", consumes = "application/json")
     public int loginUser(@RequestBody Admin admin) throws NoSuchAlgorithmException {
     	
+    	String myHash = getHash(admin.getPassword());
     	
-    	String password = admin.getPassword();
-    	System.out.println(password);
     	System.out.println(admin.getUsername());
-    	List<Admin> admin1 = admindao.findAdminByEmailAndPassword(admin.getUsername(),password);
+    	List<Admin> admin1 = admindao.findAdminByEmailAndPassword(admin.getUsername(),myHash);
     	if(admin1.isEmpty()) {
     		return 0;
     	}
