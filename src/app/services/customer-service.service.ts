@@ -1,0 +1,59 @@
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Customer } from '../class/customer';
+import { ForgotPassword } from '../class/Password';
+import { Loan } from '../class/loan';
+import { Confirmation } from '../class/confirmation';
+ 
+import { Observable } from 'rxjs/Observable';
+
+
+@Injectable({
+  providedIn: 'root'
+})
+export class CustomerServiceService {
+
+  private customerUrl: string;
+  private loginUrl: string;
+  private forgotPasswordUrl: string;
+  private loanTrackerUrl : string;
+  private resetPasswordUrl:string;
+
+  constructor(private http: HttpClient) {
+    this.customerUrl = 'http://localhost:9091/customer';
+    this.loginUrl = 'http://localhost:9091/loginuser';
+    this.forgotPasswordUrl = 'http://localhost:9091/forgotpassword';
+    this.loanTrackerUrl = 'http://localhost:9091/userstatus';
+    this.resetPasswordUrl = 'http://localhost:9091/resetPassword';
+
+  }
+
+  public save(customer: Customer) {
+    return this.http.post(this.customerUrl, customer);
+  }
+
+  public login(customer: Customer) {
+    return this.http.post(this.loginUrl, customer);
+  }
+
+  public forgotPassword(forgot: ForgotPassword){
+
+      return this.http.post(this.forgotPasswordUrl, forgot);
+
+
+  }
+
+
+  public resetPassword(confirmation : Confirmation){
+
+      return this.http.post(this.resetPasswordUrl, confirmation);
+  }
+
+  public seeStatus(id, email): Observable<any> {
+
+      return this.http.get(this.loanTrackerUrl+"/"+id+"/"+email);
+
+  }
+
+
+}

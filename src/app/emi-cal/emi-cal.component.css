@@ -1,0 +1,43 @@
+.left-title{
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+}
+.result{
+    font-size: 25px;
+    font-weight: 600;
+}
+h5,h6{
+    color: rgb(0, 0, 0);
+}
+
+h1{
+    font-size: 35px;
+    color: gray;
+}
+@media only screen and (max-width: 768px) {
+    h1{
+        font-size: 15px;
+        color: rgb(0, 0, 0);
+    }
+   
+}
+@media only screen and (min-width: 992px) {
+    h1{
+        font-size: 35px;
+        margin-bottom: -20px;   
+    }
+}
+
+.container{    
+    
+    box-sizing: content-box;  
+    width: 300px;
+    padding: 10px;  
+    border: 5px solid #00A093;
+    float: left;
+    margin-left: 5%;
+    margin-right: auto;
+    margin-top: 50px;
+
+}

@@ -1,0 +1,21 @@
+
+<html>
+  <body>
+    <div class=container>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Sr No</th>
+          <th scope="col">Application Number</th> 
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let id of applicationIdArray; let i = index"> 
+          <td>{{i+1}}</td>   
+          <td (click)="getUser(id)">{{id}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </body>
+</html>
