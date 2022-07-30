@@ -1,34 +1,44 @@
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-  <ul class="navbar-nav ml-auto">
+<nav class="navbar navbar-expand-lg navbar__dark" >
+  <div id="nav" class="container-fluid">
+    <a id="home" class="navbar-brand" href="#">Home Loan</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a id="about" class="nav-link active" aria-current="page" href="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a id="about" class="nav-link" href="/aboutus">About</a>
+        </li>
+        <li class="nav-item">
+          <a id="about" class="nav-link" href="/faq">FAQ</a>
+        </li>
 
-    <li class="nav-item menu-item">
-      <a class="nav-link active" href="#">Home</a>
-    </li>
-
-    <li class="nav-item menu-item">
-      <a class="nav-link" href="/aboutus">About</a>
-    </li>
-
-    <li class="nav-item menu-item">
-      <a class="nav-link" href="/calculator">Calculator</a>
-    </li>
-
-      <li class="nav-item menu-item">
-      <div ngbDropdown *ngIf="!loginService.isUserLoggedIn()">
-        <a class="nav-link active" id="dropdownBasic1" ngbDropdownToggle>Login</a>
-        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-          <a ngbDropdownItem href="/login">Customer</a>
-          <a ngbDropdownItem href="/adminlogin">Admin</a>
-        </div>
-      </div>
-
-      <a style="cursor: pointer;" *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link">Logout</a>
-      
-      </li>
-
-      <li class="nav-item menu-item">
-      <a class="nav-link" href="/faq">FAQ</a>    	
-    </li>
-
-  </ul>
+        <li class="nav-item dropdown">
+          <a id="about" class="nav-link dropdown-toggle" hhref="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Login
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/login">Customer</a></li>
+            <li><a class="dropdown-item" href="/adminlogin">Admin</a></li>
+            
+          </ul>
+        
+        
+        <li class="nav-item dropdown">
+          <a id="about" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Calculator
+          </a>
+          <ul class="dropdown-menu">
+            <li><a id="calculator" class="dropdown-item" href="/calculator">EMI</a></li>
+            <li><a id="calculator" class="dropdown-item" href="/calculator">Eligibility</a></li>
+          </ul>
+          
+        </li>
+        <a id="about" style="cursor: pointer;" *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link">Logout</a>
+      </ul>
+    </div>
+  </div>
 </nav>
