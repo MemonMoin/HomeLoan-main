@@ -134,6 +134,21 @@ public class HomeController {
     	}
 
     }
+  //admin registration
+	
+//	 @PostMapping(value="/adminlogin", consumes = "application/json") public int
+//	 addAdmin(@RequestBody Admin admin) throws NoSuchAlgorithmException {
+//	
+//	 Optional<Admin> admin1 = admindao.findById(admin.getUsername());
+//	 
+//	 if(admin1.isPresent()) { return 0; } else {
+//	 
+//	 String myHash = getHash(admin.getPassword()); admin.setPassword(myHash);
+//	 admindao.save(admin); return 2;
+//	  
+//	 }
+//	  
+//	  }
     
     //user login
     @PostMapping(value="/loginuser", consumes = "application/json")
