@@ -190,7 +190,7 @@ public class HomeController {
     		confirmationDao.save(confirmationTable);
     		
            SimpleMailMessage message = new SimpleMailMessage(); 
-            message.setFrom("leeaanair1@gmail.com");
+            message.setFrom("akankshaj2712@gmail.com");
             message.setTo(email); 
             message.setSubject("Reset password for HomeLoan"); 
             message.setText("Hello. This is the link to reset your password. \n http:localhost:4200/reset?token="+confirmationTable.getConfirmationToken());

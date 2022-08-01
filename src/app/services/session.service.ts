@@ -19,9 +19,9 @@ export class SessionService {
 
 	get(key:string):string{
 
-		//uncomment the following line after work is done
+		
 		return this.sessionStorageModel[key];
-		//return "leeaanair@gmail.com";
+		
 
 	}
 
