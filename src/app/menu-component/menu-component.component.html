@@ -25,18 +25,9 @@
             <li><a class="dropdown-item" href="/adminlogin">Admin</a></li>
             
           </ul>
-        
-        
-        <li class="nav-item dropdown">
-          <a id="about" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Calculator
-          </a>
-          <ul class="dropdown-menu">
-            <li><a id="calculator" class="dropdown-item" href="/calculator">EMI</a></li>
-            <li><a id="calculator" class="dropdown-item" href="/calculator">Eligibility</a></li>
-          </ul>
-          
-        </li>
+          <li class="nav-item">
+            <a id="about" class="nav-link" href="/calculator">Calculator</a>
+          </li>
         <a id="about" style="cursor: pointer;" *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link">Logout</a>
       </ul>
     </div>

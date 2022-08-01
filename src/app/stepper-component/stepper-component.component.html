@@ -1,199 +1,205 @@
 <div align="center"> 
-<mat-horizontal-stepper [linear] = "true" #stepper>
-<!--    --> 
-  <mat-step [stepControl] = "fourthFormGroup">
-    <form [formGroup] = "fourthFormGroup">
-       <ng-template matStepLabel>Enter Personal Details</ng-template>
-       
-       <div>
-       <mat-form-field>
-            <mat-label>Nationality</mat-label>
-            <input matInput placeholder = "Enter Nationality" formControlName = "nationalityControl" required>
-       </mat-form-field>
-     </div>
-
-      <div>
-       <mat-form-field>
-            <mat-label>Address</mat-label>
-            <textarea matInput placeholder = "Enter Address" formControlName = "addressControl" required></textarea>
-       </mat-form-field>
-     </div>
-
-     <div>
-        <mat-form-field>
-            <mat-label>Aadhaar No.</mat-label>
-            <input matInput placeholder = "Enter Aadhaar No." formControlName = "anoControl" required >
-       </mat-form-field>
-     </div>
-
-      <div>
-        <mat-form-field>
-            <mat-label>Pan No.</mat-label>
-            <input matInput placeholder = "Enter Pan No." formControlName = "pnoControl" required>
-       </mat-form-field>
-     </div>
-
-     <div>
-      <mat-form-field>
-          <mat-label>Date of Birth</mat-label>
-            <input matInput [matDatepicker]="picker" max="2000-12-31" min="1900-01-01" formControlName = "dobControl">
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
-   </div>
-
-
-      <div>
-        <mat-form-field>
-            <mat-label>Phone</mat-label>
-            <input matInput placeholder = "Enter Phone Number" formControlName = "phoneControl" required>
-       </mat-form-field>
-     </div>
-
-
-    <div>
-      <mat-label>Gender</mat-label>
-      <mat-radio-group aria-label="Gender" formControlName= "genderControl" required>
-        <mat-radio-button value="M">Male</mat-radio-button>
-        <mat-radio-button value="F">Female</mat-radio-button>
-      </mat-radio-group>  
-    </div>
-    
-       <div>
-         <button mat-button matStepperNext>Next</button>
-       </div>
-
-    </form>
-
-  </mat-step>
-
-
-   <mat-step [stepControl] = "firstFormGroup">
-      <form [formGroup] = "firstFormGroup">
-         <ng-template matStepLabel>Enter Property Details</ng-template>
+  <mat-horizontal-stepper [linear] = "true" #stepper>
+  <!--    --> 
+    <mat-step [stepControl] = "fourthFormGroup">
+      <form class="fs" [formGroup] = "fourthFormGroup">
+         <ng-template matStepLabel>Enter Personal Details</ng-template>
+         
          <div>
-         <mat-form-field>
-              <mat-label>Property Location</mat-label>
-              <textarea matInput placeholder = "Enter property Location" formControlName = "plocationControl" required></textarea>
+         <mat-form-field class="text">
+              <mat-label>Nationality</mat-label>
+              <input matInput placeholder = "Enter Nationality" formControlName = "nationalityControl" required>
          </mat-form-field>
        </div>
-
-       <div>
-          <mat-form-field>
-              <mat-label>Property Name</mat-label>
-              <input matInput placeholder = "Enter property Name" formControlName = "pnameControl" required>
-         </mat-form-field>
-       </div>
-
+  
         <div>
-          <mat-form-field>
-              <mat-label>Estimated Amount</mat-label>
-              <input matInput type="number" placeholder = "Enter Estimated Amount" formControlName = "amountControl" required min="0">
+         <mat-form-field class="text">
+              <mat-label>Address</mat-label>
+              <textarea matInput placeholder = "Enter Address" formControlName = "addressControl" required></textarea>
          </mat-form-field>
        </div>
-
+  
        <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
+          <mat-form-field class="text">
+              <mat-label>Aadhaar No.</mat-label>
+              <input matInput placeholder = "Enter Aadhaar No." formControlName = "anoControl" required >
+         </mat-form-field>
+       </div>
+  
+        <div>
+          <mat-form-field class="text">
+              <mat-label>Pan No.</mat-label>
+              <input matInput placeholder = "Enter Pan No." formControlName = "pnoControl" required>
+         </mat-form-field>
+       </div>
+  
+       <div>
+        <mat-form-field class="text">
+            <mat-label>Date of Birth</mat-label>
+              <input matInput [matDatepicker]="picker" max="2000-12-31" min="1900-01-01" formControlName = "dobControl">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+     </div>
+  
+  
+        <div>
+          <mat-form-field class="text">
+              <mat-label>Phone</mat-label>
+              <input matInput placeholder = "Enter Phone Number" formControlName = "phoneControl" required>
+         </mat-form-field>
+       </div>
+  
+  <br class="colo">
+      <div class="text">
+        <mat-label class="text">Gender</mat-label>
+        <br>
+        <mat-radio-group aria-label="Gender" formControlName= "genderControl" required> 
+
+          <mat-radio-button class="rb" value="M">Male</mat-radio-button>
+          <mat-radio-button value="F">Female</mat-radio-button>
+        </mat-radio-group>  
       </div>
+      
+         <div class="nextbt">
+           <button class="nextbt" mat-button matStepperNext>Next</button>
+         </div>
+  
       </form>
-
-   </mat-step>
-
-   <mat-step [stepControl] = "secondFormGroup">
-      <form [formGroup] = "secondFormGroup">
-         <ng-template matStepLabel>Enter Income Details</ng-template>
-
-
+  
+    </mat-step>
+  
+  
+     <mat-step [stepControl] = "firstFormGroup">
+        <form  class= "fs" [formGroup] = "firstFormGroup">
+           <ng-template matStepLabel>Enter Property Details</ng-template>
+           <div>
+           <mat-form-field>
+                <mat-label>Property Location</mat-label>
+                <textarea matInput placeholder = "Enter property Location" formControlName = "plocationControl" required></textarea>
+           </mat-form-field>
+         </div>
+  
+         <div>
+            <mat-form-field>
+                <mat-label>Property Name</mat-label>
+                <input matInput placeholder = "Enter property Name" formControlName = "pnameControl" required>
+           </mat-form-field>
+         </div>
+  
           <div>
-            <mat-form-field appearance="fill">
-              <mat-label>Type of Employment</mat-label>
-              <mat-select formControlName="emptypeControl" required>
-                <mat-option  *ngFor="let emp of employment" [value]="emp.value">
-                  {{emp.display}}
-                </mat-option>
-              </mat-select>
-            </mat-form-field>
-          </div>
-
-        <div>
-          <mat-form-field>
-              <mat-label>Retirement age</mat-label>
-              <input matInput type="number" formControlName = "retireageControl" required min="30" max="100">
-         </mat-form-field>
-       </div>
-
-
-        <div>
-          <mat-form-field>
-              <mat-label>Organization Type</mat-label>
-              <input matInput placeholder = "Enter Organization Type" formControlName = "orgnameControl" required>
-         </mat-form-field>
-       </div>
-
-
-     <div>
-        <mat-form-field>
-            <mat-label>Monthly Salary</mat-label>
-            <input matInput type="number" placeholder = "Enter monthly salary" formControlName = "salaryControl" required min="0">
-       </mat-form-field>
-     </div>
-
-
-         <div>
-           <button mat-button matStepperPrevious>Back</button>
-           <button mat-button matStepperNext>Next</button>
+            <mat-form-field>
+                <mat-label>Estimated Amount</mat-label>
+                <input matInput type="number" placeholder = "Enter Estimated Amount" formControlName = "amountControl" required min="0">
+           </mat-form-field>
          </div>
-      </form>
-   </mat-step>
-
-
-      <mat-step [stepControl] = "thirdFormGroup">
-      <form [formGroup] = "thirdFormGroup">
-         <ng-template matStepLabel>Enter Loan Details</ng-template>
-
-        <div>
-          <mat-form-field>
-              <mat-label>Tenure in years</mat-label>
-              <input matInput type="number" formControlName = "tenureControl" required min="0" max="100">
-         </mat-form-field>
-       </div>
-
-        <div>
-          <mat-form-field>
-              <mat-label>Loan Amount</mat-label>
-              <input matInput type="number" formControlName = "loanamtControl" required min="0">
-         </mat-form-field>
-       </div>
-
+  
          <div>
-           <button mat-button matStepperPrevious>Back</button>
-           <button mat-button matStepperNext>Next</button>
+          <button  class="nextbt" mat-button matStepperNext>Next</button>
+         
+          <p></p> <button  class="nextbt" mat-button matStepperPrevious>Back</button>
+        </div>
+        </form>
+  
+     </mat-step>
+  
+     <mat-step [stepControl] = "secondFormGroup">
+        <form class="fs" [formGroup] = "secondFormGroup">
+           <ng-template matStepLabel>Enter Income Details</ng-template>
+  
+  
+            <div>
+              <mat-form-field appearance="fill">
+                <mat-label>Type of Employment</mat-label>
+                <mat-select formControlName="emptypeControl" required>
+                  <mat-option  *ngFor="let emp of employment" [value]="emp.value">
+                    {{emp.display}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+  
+          <div>
+            <mat-form-field>
+                <mat-label>Retirement age</mat-label>
+                <input matInput type="number" formControlName = "retireageControl" required min="30" max="100">
+           </mat-form-field>
          </div>
-      </form>
-   </mat-step>
-
-   <mat-step>
-    <ng-template matStepLabel>File Upload</ng-template>
-          <app-upload-files></app-upload-files>
-
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button matStepperNext>Next</button>
-    </div>
-
-   </mat-step>
-
-   <mat-step>
-      <ng-template matStepLabel>Done</ng-template>
-         Details taken.
-      <div>
-         <button mat-button matStepperPrevious>Back</button>
-         <button mat-button (click) = "stepper.reset()">Reset</button>
-          <button mat-button (click) = "Submit()">Submit</button>
-
+  
+  
+          <div>
+            <mat-form-field>
+                <mat-label>Organization Type</mat-label>
+                <input matInput placeholder = "Enter Organization Type" formControlName = "orgnameControl" required>
+           </mat-form-field>
+         </div>
+  
+  
+       <div>
+          <mat-form-field>
+              <mat-label>Monthly Salary</mat-label>
+              <input matInput type="number" placeholder = "Enter monthly salary" formControlName = "salaryControl" required min="0">
+         </mat-form-field>
+       </div>
+  
+  
+       <div>
+        <button  class="nextbt" mat-button matStepperNext>Next</button>
+       
+        <p></p> <button  class="nextbt" mat-button matStepperPrevious>Back</button>
       </div>
-   </mat-step>
-</mat-horizontal-stepper>
-
-</div>
+        </form>
+     </mat-step>
+  
+  
+        <mat-step [stepControl] = "thirdFormGroup">
+        <form  class="fs" [formGroup] = "thirdFormGroup">
+           <ng-template matStepLabel>Enter Loan Details</ng-template>
+  
+          <div>
+            <mat-form-field>
+                <mat-label>Tenure in years</mat-label>
+                <input matInput type="number" formControlName = "tenureControl" required min="0" max="100">
+           </mat-form-field>
+         </div>
+  
+          <div>
+            <mat-form-field>
+                <mat-label>Loan Amount</mat-label>
+                <input matInput type="number" formControlName = "loanamtControl" required min="0">
+           </mat-form-field>
+         </div>
+  
+         <div>
+          <button  class="nextbt" mat-button matStepperNext>Next</button>
+         
+          <p></p> <button  class="nextbt" mat-button matStepperPrevious>Back</button>
+        </div>>
+        </form>
+     </mat-step>
+  
+     <mat-step>
+      <ng-template matStepLabel>File Upload</ng-template>
+            <app-upload-files></app-upload-files>
+  
+            <div>
+              <button  class="nextbt" mat-button matStepperNext>Next</button>
+             
+              <p></p> <button  class="nextbt" mat-button matStepperPrevious>Back</button>
+            </div>
+  
+     </mat-step>
+  
+     <mat-step>
+        <ng-template matStepLabel >Done</ng-template>
+           <b>Details taken.</b>
+        <div>
+           <button class="nextbt" mat-button matStepperPrevious style="margin-bottom: 2rem;">Back</button><br>
+           <button class="nextbt" mat-button (click) = "stepper.reset()" style="margin-bottom: 2rem;">Reset</button><br>
+            <button class="nextbt" mat-button (click) = "Submit()">Submit</button>
+  
+        </div>
+     </mat-step>
+  </mat-horizontal-stepper>
+  
+  </div>
