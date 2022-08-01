@@ -1,6 +1,29 @@
 .card{
     margin:auto;
+    background-color:#b2ff9e;
+    border-radius: 3%;
+    text-align: center;
 }
 input[readonly] {
     background-color: white;
+  }
+  #button{
+    color: white;
+    background-color: #086375;
+  }
+
+  #click{
+   background-color: #1dd3b0;
+   color:white;
+   border-radius: 5%;
+  }
+  h1{
+    margin-top:2%;
+    
+  }
+  table td{
+    text-align: left;
+  }
+  #jumbo{
+    background-color: #d8f6d0;
   }
