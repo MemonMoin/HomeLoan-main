@@ -1,0 +1,17 @@
+.text{
+    width: 200px;
+}
+.fs{
+margin: 2rem;
+width: 50%;
+}
+.rb{
+    margin-right: 1em;
+}
+
+.nextbt{
+    width: 200px;
+    background-color:#086375;
+    border-radius: 5px;
+    color: white;
+}

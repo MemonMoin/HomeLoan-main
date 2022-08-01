@@ -7,13 +7,13 @@ form {
 
 
 input[type="text"]:focus {
-  border-color:#00A093;
-  box-shadow: 0 0 0px 0 #00A093;
+  border-color:#1DD3B0;
+  box-shadow: 0 0 0px 0 #1DD3B0;
 }
 
 input[type="password"]:focus {
-  border-color: #00A093;
-  box-shadow: 0 0 0px 0 #00A093;
+  border-color: #1DD3B0;
+  box-shadow: 0 0 0px 0 #1DD3B0;
 }
 
 .inputWithIcon input[type="text"] {
@@ -54,14 +54,14 @@ input[type="password"]:focus {
 
 .inputWithIcon.inputIconBg input[type="text"]:focus + i {
   color: #fff;
-  background-color:#00A093;
+  background-color:#1DD3B0;
   
 
 }
 
 .inputWithIcon.inputIconBg input[type="password"]:focus + i {
   color: #fff;
-  background-color:#00A093;
+  background-color:#1DD3B0;
 }
 
 .alert{
@@ -77,4 +77,7 @@ body {
 
   .forgot-btn{
     float: right;
+  }
+  #button{
+    background-color: #086375;
   }
